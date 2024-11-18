@@ -109,7 +109,6 @@ The Product Filter API is a .NET 8 Web API that provides an HTTP endpoint to fil
    dotnet run
    ```
 
-4. The API will be available at `http://localhost:5000/products/filter`.
 
 ### Example Requests
 
