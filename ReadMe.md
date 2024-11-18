@@ -15,7 +15,6 @@ The Product Filter API is designed to provide a robust and efficient way to filt
    - **In-Memory Caching**: Implemented in-memory caching using `IMemoryCache` to store filtered product results. This reduces the number of external API calls, improving response times and overall performance.
    - **Asynchronous Programming**: Utilized asynchronous programming patterns (async/await) to handle I/O-bound operations efficiently, allowing the application to scale better under load.
    - **Input Validation**: Ensured that all user inputs are validated to prevent common security vulnerabilities such as SQL injection and XSS attacks.
-   - **HTTPS**: The API is designed to be served over HTTPS, ensuring that data in transit is encrypted.
 
 3. **Unit Tests**:
 
