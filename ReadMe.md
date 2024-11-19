@@ -47,9 +47,53 @@ The Product Filter API is designed to provide a robust and efficient way to filt
      }
      ```
 
-6. **Documentation for Users of the API**:
+6. **Security Implementation**:
+
+   - **JWT Authentication**: Implemented JSON Web Token authentication to secure API endpoints
+
+7. **Service Layer Architecture**:
+
+   - **IProductService**: Handles product-related business logic and external API communication
+   - **IAuthenticationService**: Manages user authentication and JWT token generation
+   - **ICacheService**: Abstracts caching operations for better maintainability
+   - **IValidationService**: Handles input validation and sanitization
+
+8. **Model Layer Structure**:
+
+   - **Domain Models**: 
+     - `Product`: Core product entity
+     - `LoginModel`: User authentication details
+     - `APIResponse`: API response structure
+     - `ResultResponse`: Result response structure
+
+9. **Documentation for Users of the API**:
    - Comprehensive documentation is provided in the README file, detailing the API endpoints, request formats, and response structures. This documentation helps users understand how to interact with the API effectively.
    - Example requests and responses are included to illustrate how to use the filtering capabilities of the API.
+
+### Authentication
+
+The API uses JWT Bearer token authentication. To access protected endpoints:
+
+1. **Default Test Credentials**:
+   - Username: `admin`
+   - Password: `password123`
+
+2. **Authentication Endpoint**:
+   ```http
+   POST /api/auth/login
+   Content-Type: application/json
+
+   {
+     "username": "admin",
+     "password": "password123"
+   }
+   ```
+
+3. **Using the Token**:
+   ```http
+   GET /products/filter
+   Authorization: Bearer {your-jwt-token}
+   ```
 
 ### Getting Started
 
